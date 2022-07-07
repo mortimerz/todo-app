@@ -1,7 +1,10 @@
 import type { NextPage } from "next";
-
+import AppContainer from "../components/AppContainer";
 const Home: NextPage = () => {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <main className="bg-[url('../public/images/bg-desktop-light.jpg')] dark:bg-[url('../public/images/bg-desktop-dark.jpg')] bg-no-repeat bg-contain">
+      <AppContainer />
+    </main>
+  );
 };
-
 export default Home;
