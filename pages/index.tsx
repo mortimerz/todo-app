@@ -2,9 +2,9 @@ import type { NextPage } from "next";
 import AppContainer from "../components/AppContainer";
 const Home: NextPage = () => {
   return (
-    <main className="bg-[url('../public/images/bg-desktop-light.jpg')] dark:bg-[url('../public/images/bg-desktop-dark.jpg')] bg-no-repeat bg-contain">
+    <div className="app-background">
       <AppContainer />
-    </main>
+    </div>
   );
 };
 export default Home;
