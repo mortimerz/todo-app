@@ -22,11 +22,9 @@ body {
 .app-container {
   @apply
   /* mobile */
-  bg-[url('../public/images/bg-mobile-light.jpg')]
-  dark:bg-[url('../public/images/bg-mobile-dark.jpg')] 
-  bg-no-repeat bg-top dark:bg-[#1C152B]
   /* desktop */
-  sm:bg-contain 
-  sm:bg-[url('../public/images/bg-desktop-light.jpg')] 
-  sm:dark:bg-[url('../public/images/bg-desktop-dark.jpg')];
+  sm:w-[35%] 
+  sm:h-[80%]
+  flex
+  flex-col
 }
