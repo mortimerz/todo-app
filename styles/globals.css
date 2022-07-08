@@ -2,19 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 18px;
+}
+/* extend out styles here to have them in a single css file */
+.app-background {
+  @apply 
+  /* mobile */
+  bg-[url('../public/images/bg-mobile-light.jpg')]
+  dark:bg-[url('../public/images/bg-mobile-dark.jpg')] 
+  bg-no-repeat bg-top dark:bg-[#1C152B]
+  /* desktop */
+  sm:bg-contain 
+  sm:bg-[url('../public/images/bg-desktop-light.jpg')] 
+  sm:dark:bg-[url('../public/images/bg-desktop-dark.jpg')];
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+.app-container {
+  @apply
+  /* mobile */
+  bg-[url('../public/images/bg-mobile-light.jpg')]
+  dark:bg-[url('../public/images/bg-mobile-dark.jpg')] 
+  bg-no-repeat bg-top dark:bg-[#1C152B]
+  /* desktop */
+  sm:bg-contain 
+  sm:bg-[url('../public/images/bg-desktop-light.jpg')] 
+  sm:dark:bg-[url('../public/images/bg-desktop-dark.jpg')];
 }
