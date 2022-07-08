@@ -37,6 +37,7 @@ module.exports = {
         'very-dark-grayish-blue': '#4D5066',
         'very-dark-grayish-blue-hover': '#393A4C',
       },
+      red: "#FF0000"
     },
 
   },
