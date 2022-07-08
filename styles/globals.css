@@ -21,7 +21,14 @@ body {
 
 .app-container {
   @apply
+  /* for testing purposes */
+  border-red
+  border
+  
   /* mobile */
+  w-[85%] 
+  h-[85%]
+  
   /* desktop */
   sm:w-[35%] 
   sm:h-[80%]
