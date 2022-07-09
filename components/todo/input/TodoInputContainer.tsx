@@ -11,6 +11,7 @@ const TodoInputContainer: React.FC<ITodoInputContainer>  = ({ handleAddTodoItem 
 
     const addTodoItem = (input: string) => {
         handleAddTodoItem(checked, input);
+        setChecked(false)
     }
 
     return (

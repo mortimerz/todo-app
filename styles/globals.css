@@ -44,7 +44,7 @@ body {
   text-light-dark-grayish-blue
 }
 
-.todo-input-container {
+.todo-input-container, .todo-item {
   @apply
   flex 
   flex-row 
