@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
-import AppContainer from "../components/AppContainer";
+import App from "../components/AppContainer";
 const Home: NextPage = () => {
   return (
     <div className="app-background">
-      <AppContainer />
+      <App />
     </div>
   );
 };
