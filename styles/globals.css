@@ -44,7 +44,7 @@ body {
   text-light-dark-grayish-blue
 }
 
-.todo-input-container, .todo-item {
+.todo-input-container {
   @apply
   flex 
   flex-row 
@@ -53,6 +53,27 @@ body {
   bg-[#FFF]
   dark:bg-dark-very-dark-grayish-blue 
   rounded 
+  gap-1
+}
+
+.todo-options {
+  @apply
+  flex 
+  flex-col
+  h-[50px] 
+  w-full 
+  bg-[#FFF]
+  dark:bg-dark-very-dark-grayish-blue 
+}
+
+.todo-item {
+  @apply
+  flex 
+  flex-row 
+  h-[60px] 
+  w-full 
+  bg-[#FFF]
+  dark:bg-dark-very-dark-grayish-blue 
   gap-1
 }
 
