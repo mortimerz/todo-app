@@ -12,7 +12,7 @@ body {
   /* mobile */
   bg-[url('../public/images/bg-mobile-light.jpg')]
   dark:bg-[url('../public/images/bg-mobile-dark.jpg')] 
-  bg-no-repeat bg-top dark:bg-[#1C152B]
+  bg-no-repeat bg-top dark:bg-dark-very-dark-blue
   /* desktop */
   sm:bg-contain 
   sm:bg-[url('../public/images/bg-desktop-light.jpg')] 
@@ -21,9 +21,6 @@ body {
 
 .app-container {
   @apply
-  /* for testing purposes */
-  border-red
-  border
   
   /* mobile */
   w-[85%] 
@@ -34,4 +31,44 @@ body {
   sm:h-[80%]
   flex
   flex-col
+}
+
+.show-border {
+  @apply
+  border border-solid border-red
+}
+
+.footer-text {
+  @apply
+  dark:text-dark-dark-grayish-blue
+  text-light-dark-grayish-blue
+}
+
+/* to do item check indicator */
+.todo-check {
+  @apply
+  border-2
+  w-7
+  h-7
+  border-dark-dark-grayish-blue
+  rounded-full
+  flex items-center justify-center
+  m-auto
+  /* hover state */
+  hover:bg-gradient-to-r from-[#57DDFF] to-[#C058F3]
+  hover:border-none
+}
+
+.todo-check-selected {
+  /* background-image: linear-gradient(to right, #57DDFF, #C058F3); */
+  @apply
+  bg-gradient-to-r from-[#57DDFF] to-[#C058F3]
+}
+
+.todo-check-fill {
+  @apply
+  h-[85%]
+  w-[85%]
+  rounded-full
+  bg-dark-very-dark-grayish-blue 
 }
