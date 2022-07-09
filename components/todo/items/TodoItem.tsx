@@ -1,6 +1,5 @@
 import { useState } from "react";
 import TodoCheckIndicator from "../input/TodoCheckIndicator";
-import TodoInputField from "../input/TodoInputField";
 
 export enum TodoState {
   ACTIVE = 'ACTIVE',
@@ -17,6 +16,7 @@ const TodoItem: React.FC<ITodoItem> = ({ isChecked, title, state = TodoState.ACT
   return (
     <div className="todo-item">
       <TodoCheckIndicator checked={checked} setChecked={setChecked} />
+      <span className="px-3 py-3  dark:text-dark-light-grayish-blue">{title}</span>
     </div>);
 };
 
