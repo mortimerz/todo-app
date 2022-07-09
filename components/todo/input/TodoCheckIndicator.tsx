@@ -1,13 +1,13 @@
 import { useState } from "react";
 
 interface ITodoCheckIndicator {
-    isChecked: boolean;
+    checked: boolean,
+    setChecked: (checked: boolean) => void
 }
 
 const TodoCheckIndicator: React.FC<ITodoCheckIndicator> = ({
-    isChecked = false,
+    checked = false, setChecked
 }) => {
-    const [checked, setChecked] = useState(isChecked);
 
     const toggleCheck = () => {
         setChecked(!checked);

@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 interface ITodoInputField {
-    addTodoItem: (todo: string) => void
+    addTodoItem: (input: string) => void
 }
 const TodoInputField: React.FC<ITodoInputField> = ({ addTodoItem }) => {
     const [value, setValue] = useState("")
