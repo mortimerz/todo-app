@@ -15,6 +15,7 @@ module.exports = {
     },
     // set up theme colors
     colors: {
+      transparent: 'transparent',
       primary: {
         'bright-blue': '#3A7BFD',
         'check-color': 'linear-gradient(to right, #57DDFF, #C058F3)',
