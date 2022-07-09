@@ -17,7 +17,7 @@ const AppContainer: React.FC = () => {
         <div className="w-screen h-screen flex flex-col justify-center items-center ">
             <div className="app-container">
                 <Header />
-                <div className="show-border min-h-[85%] max-h-[80%] gap-4 flex flex-col">
+                <div className="min-h-[85%] max-h-[80%] gap-4 flex flex-col">
                     <TodoInputContainer handleAddTodoItem={addTodoItem}/>
                     <TodoItemsContainer todoItems={todos}/>
                 </div>
