@@ -1,37 +1,15 @@
 import TodoCheckIndicator from "./TodoCheckIndicator";
+import TodoInputField from "./TodoInputField";
 const TodoInputContainer = () => {
 
+    const handleAddTodoItem = (todo: string) => {
+        console.log(todo);
+    }
 
     return (
-        <div className="f
-            flex 
-            flex-row 
-            h-[50px] 
-            w-full 
-            bg-[#FFF]
-            dark:bg-dark-very-dark-grayish-blue 
-            rounded 
-            gap-1">
+        <div className="todo-input-container">
             <TodoCheckIndicator isChecked={false} />
-            <input
-                className="
-                    bg-transparent
-                    w-full 
-                    py-2
-                    px-2
-                    leading-tight
-                    focus:outline-none
-                    focus:shadow-outline
-                    placeholder-light-light-grayish-blue
-                    dark:placeholder-dark-dark-grayish-blue
-                    dark:text-dark-light-grayish-blue
-                    "
-                type="text"
-                placeholder="Type a Todo Item"
-                onKeyDown={(e) => {
-                    console.log(e.key)
-                }}
-            />
+            <TodoInputField addTodoItem={handleAddTodoItem} />
         </div>);
 };
 

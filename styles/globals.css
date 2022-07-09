@@ -44,6 +44,18 @@ body {
   text-light-dark-grayish-blue
 }
 
+.todo-input-container {
+  @apply
+  flex 
+  flex-row 
+  h-[50px] 
+  w-full 
+  bg-[#FFF]
+  dark:bg-dark-very-dark-grayish-blue 
+  rounded 
+  gap-1
+}
+
 /* to do item check indicator */
 .todo-check {
   @apply
@@ -72,4 +84,17 @@ body {
   rounded-full
   bg-[#FFF]
   dark:bg-dark-very-dark-grayish-blue
+}
+
+.todo-input-field {
+  @apply
+  bg-transparent
+  w-full
+  py-2
+  px-2
+  leading-tight
+  focus:outline-none
+  placeholder-light-light-grayish-blue
+  dark:placeholder-dark-dark-grayish-blue
+  dark:text-dark-light-grayish-blue
 }
