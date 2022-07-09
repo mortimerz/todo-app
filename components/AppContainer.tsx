@@ -1,7 +1,7 @@
 import Footer from "./Footer";
 import Header from "./Header";
-import TodoItemsContainer from "./todo/TodoItemsContainer";
-import TodoInputContainer from "./todo/TodoInputContainer";
+import TodoItemsContainer from "./todo/items/TodoItemsContainer";
+import TodoInputContainer from "./todo/input/TodoInputContainer";
 
 const AppContainer: React.FC = () => {
     return (
