@@ -1,7 +1,7 @@
 import Footer from "./Footer";
 import Header from "./Header";
-import TodoHolder from "./todo/TodoHolder";
-import TodoInput from "./todo/TodoInput";
+import TodoItemsContainer from "./todo/TodoItemsContainer";
+import TodoInputContainer from "./todo/TodoInputContainer";
 
 const AppContainer: React.FC = () => {
     return (
@@ -9,8 +9,8 @@ const AppContainer: React.FC = () => {
             <div className="app-container">
                 <Header />
                 <div className="min-h-[250px] max-h-[500px]">
-                    <TodoInput />
-                    <TodoHolder />
+                    <TodoInputContainer />
+                    <TodoItemsContainer />
                 </div>
                 <Footer />
             </div>
