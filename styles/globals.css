@@ -70,5 +70,6 @@ body {
   h-[85%]
   w-[85%]
   rounded-full
-  bg-dark-very-dark-grayish-blue 
+  bg-[#FFF]
+  dark:bg-dark-very-dark-grayish-blue
 }
