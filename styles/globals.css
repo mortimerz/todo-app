@@ -173,11 +173,12 @@
 .todo-empty {
   @apply
   h-[100%]
-  text-[16px]
+  sm:text-[16px]
+  text-[14px]
   dark:text-dark-light-grayish-blue
   text-light-dark-grayish-blue
   bg-[#FFF]
   shadow-xl
   dark:bg-dark-very-dark-grayish-blue
-  flex justify-center items-center 
+  flex justify-center items-center text-center
 }
