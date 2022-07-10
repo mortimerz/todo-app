@@ -27,7 +27,6 @@ export default class TodoStore {
     public addTodoItem = (description: string, state: TodoState) => {
         const uuid = window.crypto.randomUUID();
         this.todoItems = [...this.todoItems, { description, state, uuid }];
-        this.showTodos()
     }
 
     public getFilteredView = () => {
