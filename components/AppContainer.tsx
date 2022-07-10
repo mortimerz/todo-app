@@ -9,13 +9,13 @@ const AppContainer: React.FC = () => {
     const todoStore = new TodoStore();
 
     return (
-        <div className="w-screen h-screen flex flex-col justify-center items-center ">
+        <div className="w-screen h-screen flex flex-col justify-center items-center">
             <div className="app-container gap-6">
                 <Header />
                 <TodoInputContainer todoStore={todoStore} />
-                <div className="min-h-[85%] max-h-[80%] flex flex-col">
-                    <TodoItemsContainer 
-                        todoStore={todoStore} 
+                <div className="min-h-[80%] max-h-[80%] flex flex-col">
+                    <TodoItemsContainer
+                        todoStore={todoStore}
                     />
                 </div>
                 <Footer />

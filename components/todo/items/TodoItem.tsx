@@ -11,11 +11,11 @@ interface ITodoItemComponent extends ITodoItem {
 
 const TodoItem: React.FC<ITodoItemComponent> = ({ description, state = TodoState.ACTIVE, uuid, todoStore }) => {
   return (
-    <div className="todo-item select-none group" >
+    <div className="todo-item select-none group" onClick={() => todoStore.toggleTodoItemCheckState(uuid)} >
       {/* check indicator */}
-      <TodoCheckIndicator checked={state === TodoState.COMPLETED} setChecked={() => todoStore.toggleTodoItemCheckState(uuid)} />
+      <TodoCheckIndicator checked={state === TodoState.COMPLETED} />
       {/* description */}
-      <div className="px-3 py-3 w-[80%]">
+      <div className="px-3 py-3 w-[95%]">
         {state === TodoState.COMPLETED ?
           <div className="todo-item-description dark:text-dark-dark-grayish-blue text-light-light-grayish-blue line-through">
             {description}
