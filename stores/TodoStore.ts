@@ -32,11 +32,11 @@ export default class TodoStore {
     public getFilteredView = () => {
         switch (this.viewFilter) {
             case TodoViewFilter.ACTIVE:
-                return toJS(this.todoItems.filter(todo => todo.state === TodoState.ACTIVE));
+                return toJS(this.todoItems.filter(todo => todo.state === TodoState.ACTIVE)).reverse();
             case TodoViewFilter.COMPLETED:
-                return toJS(this.todoItems.filter(todo => todo.state === TodoState.COMPLETED));
+                return toJS(this.todoItems.filter(todo => todo.state === TodoState.COMPLETED)).reverse();
             default:
-                return toJS(this.todoItems);
+                return toJS(this.todoItems).reverse();
         }
     }
 
