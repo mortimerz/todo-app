@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-body {
-  font-size: 18px;
-}
 /* extend out styles here to have them in a single css file */
 .app-background {
   @apply 
@@ -105,6 +101,23 @@ body {
   gap-1
 }
 
+.todo-items-container {
+  @apply
+  overflow-y-auto
+  items-center 
+  flex 
+  flex-col 
+  rounded
+  h-[80%]
+  max-h-[80%]
+  divide-y-[1px]
+  shadow-xl
+  bg-[#FFF]
+  dark:bg-dark-very-dark-grayish-blue 
+  dark:divide-dark-light-grayish-blue/[.20]
+  divide-light-light-grayish-blue
+}
+
 /* to do item check indicator */
 .todo-check {
   @apply
@@ -153,4 +166,15 @@ body {
   flex
   flex-row
   break-all
+}
+
+.todo-empty {
+  @apply
+  h-[80%]
+  text-[16px]
+  dark:text-dark-light-grayish-blue
+  text-light-dark-grayish-blue
+  bg-[#FFF]
+  dark:bg-dark-very-dark-grayish-blue
+  flex justify-center items-center 
 }
