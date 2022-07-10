@@ -1,27 +1,13 @@
-
-import { useState } from "react";
-import TodoItem, { ITodoItem, TodoState } from "./TodoItem";
+import { observer } from "mobx-react";
+import TodoStore, { ITodoItem, TodoViewFilter } from "../../../stores/TodoStore";
+import TodoItem from "./TodoItem";
 import TodoOptionsContainer from "./TodoOptionsContainer";
 
 interface ITodoItemsContainer {
-  todoItems: ITodoItem[];
+  todoStore:TodoStore;
 }
 
-export enum TodoViewFilter {
-  ALL = "ALL",
-  ACTIVE = "ACTIVE",
-  COMPLETED = "COMPLETED",
-}
-const TodoItemsContainer: React.FC<ITodoItemsContainer> = ({ todoItems }) => {
-
-
-  const [todos, setTodos] = useState(todoItems);
-  const [viewFilter, setViewFilter] = useState(TodoViewFilter.ALL);
-
-
-  const handleClearCompleted = () => {
-    console.log('handleClearCompleted will be implemented');
-  }
+const TodoItemsContainer: React.FC<ITodoItemsContainer> = ({ todoStore }) => {
   return (
     <>
       <div className="
@@ -36,21 +22,18 @@ const TodoItemsContainer: React.FC<ITodoItemsContainer> = ({ todoItems }) => {
       dark:divide-dark-light-grayish-blue/[.20]
       divide-light-light-grayish-blue
       ">
-        {todoItems.map((todo: ITodoItem, index) => (
-          <TodoItem key={index} {...todo}></TodoItem>
-        ))}
+        {todoStore.getFilteredView().map((todo: ITodoItem, index) => {
+          return (
+            <TodoItem key={index} {...todo}></TodoItem>
+          )
+        })}
       </div>
       {
-        !!todoItems.length ?
-          <TodoOptionsContainer
-            viewFilter={viewFilter}
-            activeItems={todoItems.filter((item) => item.state === TodoState.ACTIVE).length}
-            setViewFilter={(filter: TodoViewFilter) => { setViewFilter(filter) }}
-            clearCompleted={handleClearCompleted}
-          /> : ''
+        !!todoStore.todoItems.length ?
+          <TodoOptionsContainer todoStore={todoStore} /> : ''
       }
     </>
   )
 };
 
-export default TodoItemsContainer;
+export default observer(TodoItemsContainer);

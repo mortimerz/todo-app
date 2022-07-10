@@ -1,18 +1,10 @@
+
 import { useState } from "react";
+import { ITodoItem, TodoState } from "../../../stores/TodoStore";
 import TodoCheckIndicator from "../input/TodoCheckIndicator";
 
-export enum TodoState {
-  ACTIVE = 'ACTIVE',
-  COMPLETED = 'COMPLETED',
-}
-export interface ITodoItem {
-  isChecked: boolean;
-  description: string;
-  state: TodoState;
-}
-
-const TodoItem: React.FC<ITodoItem> = ({ isChecked, description, state = TodoState.ACTIVE }) => {
-  const [checked, setChecked] = useState(isChecked);
+const TodoItem: React.FC<ITodoItem> = ({ description, state = TodoState.ACTIVE }) => {
+  const [checked, setChecked] = useState(state === TodoState.COMPLETED);
   return (
     <div className="todo-item select-none" >
       {/* check indicator */}

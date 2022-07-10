@@ -1,16 +1,18 @@
 import { useState } from "react";
+import TodoStore, { TodoState } from "../../../stores/TodoStore";
 import TodoCheckIndicator from "./TodoCheckIndicator";
 import TodoInputField from "./TodoInputField";
 
 interface ITodoInputContainer {
-    handleAddTodoItem: (isChecked: boolean, description: string) => void
+    todoStore:TodoStore;
 }
 
-const TodoInputContainer: React.FC<ITodoInputContainer>  = ({ handleAddTodoItem }) => {
+const TodoInputContainer: React.FC<ITodoInputContainer>  = ({todoStore}) => {
     const [checked, setChecked] = useState(false);
 
     const addTodoItem = (input: string) => {
-        handleAddTodoItem(checked, input);
+        const state = checked ? TodoState.COMPLETED : TodoState.ACTIVE;
+        todoStore.addTodoItem(input, state);
         setChecked(false)
     }
 
