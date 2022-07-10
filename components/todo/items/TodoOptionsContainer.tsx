@@ -9,9 +9,9 @@ const TodoOptionsContainer: React.FC<ITodoOptionsContainer> = ({todoStore}) => {
     const viewFilter = todoStore.viewFilter;
     return (
         <div className="todo-option-container">
-            <div className="todo-option w-[20%]">{`${!!activeItems ? activeItems : 0} items left`}</div>
-            <div className="todo-option w-[57%]">
-                <div className="flex flex-row justify-between w-[55%] font-bold">
+            <div className="todo-option sm:w-[20%]">{`${!!activeItems ? activeItems : 0} items left`}</div>
+            <div className="todo-option sm:w-[57%]">
+                <div className="flex flex-row justify-between sm:w-[55%] sm:visible invisible font-bold">
                     <div
                         className={`${viewFilter === TodoViewFilter.ALL ? 'todo-option-selected' : 'todo-option-hover'}`}
                         onClick={() => todoStore.setViewFilter(TodoViewFilter.ALL)}
@@ -30,7 +30,7 @@ const TodoOptionsContainer: React.FC<ITodoOptionsContainer> = ({todoStore}) => {
                     </div>
                 </div>
             </div>
-            <div className="todo-option w-[22%] pr-2 font-bold todo-option-hover" onClick={todoStore.clearCompletedTodoItems}>Clear Completed</div>
+            <div className="todo-option sm:w-[22%] pr-2 font-bold todo-option-hover" onClick={todoStore.clearCompletedTodoItems}>Clear Completed</div>
         </div>
     )
 }
