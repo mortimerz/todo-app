@@ -89,6 +89,12 @@ body {
   cursor-pointer
 }
 
+.todo-option-selected {
+  @apply
+ text-primary-bright-blue
+  cursor-pointer
+}
+
 .todo-item {
   @apply
   flex 

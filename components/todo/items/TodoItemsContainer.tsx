@@ -43,6 +43,7 @@ const TodoItemsContainer: React.FC<ITodoItemsContainer> = ({ todoItems }) => {
       {
         !!todoItems.length ?
           <TodoOptionsContainer
+            viewFilter={viewFilter}
             activeItems={todoItems.filter((item) => item.state === TodoState.ACTIVE).length}
             setViewFilter={(filter: TodoViewFilter) => { setViewFilter(filter) }}
             clearCompleted={handleClearCompleted}
