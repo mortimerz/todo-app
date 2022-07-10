@@ -14,9 +14,28 @@ export interface ITodoItem {
 const TodoItem: React.FC<ITodoItem> = ({ isChecked, description, state = TodoState.ACTIVE }) => {
   const [checked, setChecked] = useState(isChecked);
   return (
-    <div className="todo-item">
+    <div className="todo-item select-none" >
+      {/* check indicator */}
       <TodoCheckIndicator checked={checked} setChecked={setChecked} />
-      <span className="px-3 py-3  dark:text-dark-light-grayish-blue">{title}</span>
+      {/* description */}
+      <div className="px-3 py-3">
+      { checked ? 
+        <div className="todo-item-description 
+        dark:text-dark-dark-grayish-blue 
+        text-light-light-grayish-blue
+        line-through">
+          {description}
+        </div>  : 
+        <div className="todo-item-description 
+        text-light-dark-grayish-blue
+        dark:text-dark-light-grayish-blue
+        ">
+        {description}
+      </div>
+        }
+      </div>
+      {/* remove */}
+      <TodoCheckIndicator checked={checked} setChecked={setChecked} />
     </div>);
 };
 
