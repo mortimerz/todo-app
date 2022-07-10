@@ -24,7 +24,7 @@ const TodoItemsContainer: React.FC<ITodoItemsContainer> = ({ todoStore }) => {
       ">
         {todoStore.getFilteredView().map((todo: ITodoItem, index) => {
           return (
-            <TodoItem key={index} {...todo}></TodoItem>
+            <TodoItem key={index} todoStore={todoStore} {...todo}></TodoItem>
           )
         })}
       </div>
