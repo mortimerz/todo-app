@@ -58,7 +58,9 @@ export default class TodoStore {
     @action
     public toggleTodoItemCheckState = (uuid: string) => {
         const todoItem = this.todoItems.find(todo => todo.uuid === uuid);
-        todoItem!.state = (todoItem!.state === TodoState.ACTIVE ? TodoState.COMPLETED : TodoState.ACTIVE);
+        if (todoItem) {
+            todoItem!.state = (todoItem!.state === TodoState.ACTIVE ? TodoState.COMPLETED : TodoState.ACTIVE);
+        }
     }
 
     public showTodos = () => {
