@@ -8,8 +8,8 @@ import { ITodoItem, TodoState } from "./todo/items/TodoItem";
 const AppContainer: React.FC = () => {
     const [todos, setTodos] = useState<ITodoItem[]>([]);
 
-    const addTodoItem = (isChecked: boolean, title: string) => {
-        const todo: ITodoItem = { isChecked, title, state: TodoState.ACTIVE }
+    const addTodoItem = (isChecked: boolean, description: string) => {
+        const todo: ITodoItem = { isChecked, description, state: TodoState.ACTIVE }
         setTodos([...todos, todo]);
     }
 

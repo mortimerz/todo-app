@@ -3,7 +3,7 @@ import TodoCheckIndicator from "./TodoCheckIndicator";
 import TodoInputField from "./TodoInputField";
 
 interface ITodoInputContainer {
-    handleAddTodoItem: (isChecked: boolean, title: string) => void
+    handleAddTodoItem: (isChecked: boolean, description: string) => void
 }
 
 const TodoInputContainer: React.FC<ITodoInputContainer>  = ({ handleAddTodoItem }) => {

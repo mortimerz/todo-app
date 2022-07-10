@@ -7,11 +7,11 @@ export enum TodoState {
 }
 export interface ITodoItem {
   isChecked: boolean;
-  title: string;
+  description: string;
   state: TodoState;
 }
 
-const TodoItem: React.FC<ITodoItem> = ({ isChecked, title, state = TodoState.ACTIVE }) => {
+const TodoItem: React.FC<ITodoItem> = ({ isChecked, description, state = TodoState.ACTIVE }) => {
   const [checked, setChecked] = useState(isChecked);
   return (
     <div className="todo-item">
