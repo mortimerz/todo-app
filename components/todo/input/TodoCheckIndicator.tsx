@@ -1,22 +1,14 @@
 import { useState } from "react";
 
 interface ITodoCheckIndicator {
-    checked: boolean,
-    setChecked: (checked: boolean) => void
+    checked: boolean
 }
 
-const TodoCheckIndicator: React.FC<ITodoCheckIndicator> = ({
-    checked = false, setChecked
-}) => {
-
-    const toggleCheck = () => {
-        setChecked(!checked);
-    };
-
+const TodoCheckIndicator: React.FC<ITodoCheckIndicator> = ({checked}) => {
     return (
         <div className="py-3 px-2">
             {checked ? (
-                <div className="todo-check todo-check-selected" onClick={toggleCheck}>
+                <div className="todo-check todo-check-selected">
                     <svg xmlns="http://www.w3.org/2000/svg" width="10" height="9">
                         <path
                             fill="none"
@@ -27,7 +19,7 @@ const TodoCheckIndicator: React.FC<ITodoCheckIndicator> = ({
                     </svg>
                 </div>
             ) : (
-                <div className="todo-check" onClick={toggleCheck}>
+                <div className="todo-check">
                     <div className="todo-check-fill"></div>
                 </div>
             )}
