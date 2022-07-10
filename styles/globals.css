@@ -63,14 +63,17 @@ body {
   h-[50px] 
   w-full 
   bg-[#FFF]
-  dark:bg-dark-very-dark-grayish-blue 
+  dark:bg-dark-very-dark-grayish-blue
+  sticky 
+  top-[100vh] 
+  text-dark-dark-grayish-blue
+
 }
 
 .todo-item {
   @apply
   flex 
   flex-row 
-  h-[60px] 
   w-full 
   bg-[#FFF]
   dark:bg-dark-very-dark-grayish-blue 
@@ -87,13 +90,13 @@ body {
   rounded-full
   flex items-center justify-center
   m-auto
+  cursor-pointer
   /* hover state */
   hover:bg-gradient-to-r from-[#57DDFF] to-[#C058F3]
   hover:border-none
 }
 
 .todo-check-selected {
-  /* background-image: linear-gradient(to right, #57DDFF, #C058F3); */
   @apply
   bg-gradient-to-r from-[#57DDFF] to-[#C058F3]
 }
@@ -118,4 +121,11 @@ body {
   placeholder-light-light-grayish-blue
   dark:placeholder-dark-dark-grayish-blue
   dark:text-dark-light-grayish-blue
+}
+
+.todo-item-description {
+  @apply
+  flex
+  flex-row
+  break-all
 }
