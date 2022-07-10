@@ -46,8 +46,8 @@ export default class TodoStore {
     }
 
     @action
-    public removeTodoItem = (todoItem: ITodoItem) => {
-        this.todoItems = this.todoItems.filter(({ uuid }) => todoItem.uuid !== uuid);
+    public removeTodoItem = (uuid: string) => {
+        this.todoItems = this.todoItems.filter((todoItem) => todoItem.uuid !== uuid);
     }
 
     @action

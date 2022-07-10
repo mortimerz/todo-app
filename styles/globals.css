@@ -99,6 +99,7 @@
   bg-[#FFF]
   dark:bg-dark-very-dark-grayish-blue 
   gap-1
+  cursor-pointer
 }
 
 .todo-items-container {
@@ -128,7 +129,6 @@
   rounded-full
   flex items-center justify-center
   m-auto
-  cursor-pointer
   /* hover state */
   hover:bg-gradient-to-r from-[#57DDFF] to-[#C058F3]
   hover:border-none
@@ -175,6 +175,7 @@
   dark:text-dark-light-grayish-blue
   text-light-dark-grayish-blue
   bg-[#FFF]
+  shadow-xl
   dark:bg-dark-very-dark-grayish-blue
   flex justify-center items-center 
 }
