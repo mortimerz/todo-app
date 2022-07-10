@@ -21,7 +21,7 @@ body {
 
 .app-container {
   @apply
-  
+  text-[14px]
   /* mobile */
   w-[85%] 
   h-[85%]
@@ -52,22 +52,41 @@ body {
   w-full 
   bg-[#FFF]
   dark:bg-dark-very-dark-grayish-blue 
-  rounded 
+  rounded-t
   gap-1
 }
 
-.todo-options {
+.todo-option-container {
   @apply
   flex 
-  flex-col
+  flex-row
   h-[50px] 
   w-full 
   bg-[#FFF]
   dark:bg-dark-very-dark-grayish-blue
-  sticky 
-  top-[100vh] 
-  text-dark-dark-grayish-blue
+  dark:text-dark-dark-grayish-blue
+  text-light-light-grayish-blue
+  rounded-b-md 
+  shadow-xl 
+  border-t 
+  justify-center
+}
 
+.todo-option {
+  @apply
+  flex
+  flex-row
+  items-center
+  text-[12px]
+  justify-center
+  /* dark:text- */
+}
+
+.todo-option-hover {
+  @apply
+  hover:text-light-dark-grayish-blue
+  hover:dark:text-dark-light-grayish-blue
+  cursor-pointer
 }
 
 .todo-item {
