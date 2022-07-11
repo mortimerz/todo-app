@@ -18,13 +18,11 @@
 
 .app-container {
   @apply
-  
   /* mobile */
   w-[85%] 
   h-[85%]
   text-[12px]
   font-JosefinSans
-  
   /* desktop */
   sm:w-[35%] 
   sm:h-[80%]
