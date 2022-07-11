@@ -67,4 +67,8 @@ export default class TodoStore {
     public updateTodoListOrder = (todoItems: ITodoItem[]) => {
         this.todoItems = todoItems;
     }
+
+    public getTodoItems = () => {
+        return toJS(this.todoItems).reverse();
+    }
 }

@@ -11,9 +11,17 @@ interface ITodoItemsContainer {
 const TodoItemsContainer: React.FC<ITodoItemsContainer> = ({ todoStore }) => {
   // reorder todo items on drag end event
   const handleOnDragEnd = (result: DropResult) => {
-    if (!result.destination) return;
+    // for improvement - do not allow reordering if current view filter is not ALL
+    if (todoStore.viewFilter !== TodoViewFilter.ALL) {
+      alert('Reordering is not allowed for Active and Completed view')
+      return;
+    }
+    // if out of bounds just do an early return
+    if (!result.destination) {
+      return;
+    }
     if (!!result) {
-      const items = Array.from(todoStore.getFilteredView());
+      const items = Array.from(todoStore.getTodoItems());
       const [reorderedItem] = items.splice(result.source.index, 1);
       items.splice(result.destination!.index, 0, reorderedItem);
       todoStore.updateTodoListOrder(items.reverse());
