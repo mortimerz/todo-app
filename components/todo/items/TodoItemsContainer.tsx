@@ -4,22 +4,19 @@ import EmptyView from "./EmptyView";
 import TodoItem from "./TodoItem";
 import TodoOptionsContainer from "./TodoOptionsContainer";
 import { DragDropContext, Droppable, Draggable, DropResult } from "react-beautiful-dnd";
-import { useState } from 'react';
-
 interface ITodoItemsContainer {
   todoStore: TodoStore;
 }
 
 const TodoItemsContainer: React.FC<ITodoItemsContainer> = ({ todoStore }) => {
-  const [todoItems, updateTodoItems] = useState(todoStore.getFilteredView());
-
+  // reorder todo items on drag end event
   const handleOnDragEnd = (result: DropResult) => {
     if (!result.destination) return;
     if (!!result) {
-      const items = Array.from(todoItems);
+      const items = Array.from(todoStore.getFilteredView());
       const [reorderedItem] = items.splice(result.source.index, 1);
       items.splice(result.destination!.index, 0, reorderedItem);
-      updateTodoItems(items);
+      todoStore.updateTodoListOrder(items.reverse());
     }
   }
 
