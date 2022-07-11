@@ -5,9 +5,7 @@ interface ITodoCheckIndicator {
     setChecked: (checked: boolean) => void
 }
 
-const TodoCheckIndicator: React.FC<ITodoCheckIndicator> = ({
-    checked = false, setChecked
-}) => {
+const TodoCheckIndicator: React.FC<ITodoCheckIndicator> = ({ checked = false, setChecked }) => {
 
     const toggleCheck = () => {
         setChecked(!checked);
