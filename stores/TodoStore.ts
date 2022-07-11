@@ -63,7 +63,8 @@ export default class TodoStore {
         }
     }
 
-    public showTodos = () => {
-        console.log(toJS(this.todoItems));
+    @action
+    public updateTodoListOrder = (todoItems: ITodoItem[]) => {
+        this.todoItems = todoItems;
     }
 }
