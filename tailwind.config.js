@@ -7,7 +7,11 @@ module.exports = {
   // added darkMode: `class` to enable toggling of dark/light
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        JosefinSans: ['Josefin Sans', 'sans-serif'],
+       },
+    },
     screens: {
       // default is mobile view 375px
       // sm -> desktop view

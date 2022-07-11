@@ -21,7 +21,7 @@ const Header = () => {
         <div className="flex flex-row h-[65px]">
             {/* Title */}
             <div className="text-left flex-grow m-auto">
-                <h1 className="text-4xl text-light-very-light-gray font-sans font-semibold">
+                <h1 className="text-3xl text-light-very-light-gray">
                     T O D O
                 </h1>
             </div>

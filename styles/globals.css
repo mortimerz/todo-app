@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -22,6 +23,7 @@
   w-[85%] 
   h-[85%]
   text-[12px]
+  font-JosefinSans
   
   /* desktop */
   sm:w-[35%] 
@@ -182,3 +184,8 @@
   dark:bg-dark-very-dark-grayish-blue
   flex justify-center items-center text-center
 }
+
+/* @font-face {
+  font-family: 'Josefin Sans';
+  src: local('Josefin Sans'), url(../public/font/JosefinSans-VariableFont_wght.ttf) format('ttf');
+} */
