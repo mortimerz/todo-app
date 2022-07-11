@@ -10,7 +10,6 @@ const TodoCheckIndicator: React.FC<ITodoCheckIndicator> = ({
 }) => {
 
     const toggleCheck = () => {
-        console.log(checked);
         setChecked(!checked);
     };
 
